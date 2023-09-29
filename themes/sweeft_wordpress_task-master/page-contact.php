@@ -5,7 +5,7 @@ get_header();
     <div class="row">
         <div class="col-md-6">
             <h2>შეავსეთ ფორმა</h2>
-            <form action="" method="POST">
+            <form action="<?php echo esc_url(get_template_directory_uri() . '/contact/contact-form-handler.php'); ?>" method="POST">
                 <div class="form-group">
                     <label for="name">სახელი:</label>
                     <input type="text" class="form-control" id="name" name="name" required>
@@ -34,5 +34,4 @@ get_header();
         </div>
     </div>
 </div>
-
 <?php get_footer(); ?>
