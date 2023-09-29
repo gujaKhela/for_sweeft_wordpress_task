@@ -55,6 +55,26 @@ This project utilizes Advanced Custom Fields (ACF) to enhance WordPress content 
 
 8. You're ready to explore and customize this WordPress project!
 
+## Database Table Setup
+
+Before using this theme, you need to create a custom database table named `wp_contact_information` to store contact form submissions. To set up this table, follow these steps:
+
+1. Access your WordPress database using a tool like phpMyAdmin or a MySQL command line.
+
+2. Create a new table with the following structure:
+
+   ```sql
+   CREATE TABLE `wp_contact_information` (
+     `id` INT NOT NULL AUTO_INCREMENT,
+     `name` VARCHAR(255) NOT NULL,
+     `email` VARCHAR(255) NOT NULL,
+     `subject` VARCHAR(255) NOT NULL,
+     `message` TEXT NOT NULL,
+     `submission_date` DATETIME NOT NULL,
+     PRIMARY KEY (`id`)
+   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+   ```
+
 ## Contact
 
 For questions or inquiries, please contact [Guja] at [khelashviliguja@gmail.com].
